@@ -22,3 +22,10 @@ void fun_b(int a[], int tam){
         fun_a(&b[f], &b[l]);
     }
 }
+// ¿Cual es la direccion de memoria ?____direccion de memoria 0x61fdf0
+// ¿Ciantos bytes se dedican para almecenar cada elemento del arreglo ?______ 4 bytes
+// ¿Direccion y contenido en arrray [3]? direccion = 0x61fdfc contenido = 3
+// ¿Describa el efecto que tiene la funcion fun_b, sobre el arreglo array?
+/*en la fun_b lo que hace es usar la fun_a, para reemplazar el valor que hay en la poscion del arreglo
+por el imedianto valor posterior, haciendo una modificacion de los punteros, lo intercambia hasta
+que como resultado final entrega los munterios avanzados en un paso*/
