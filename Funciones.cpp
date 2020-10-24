@@ -76,7 +76,7 @@ void ejercicio7(int A){
 void ejercicio9(int A, char C[50], int B){
     int E=0;
     int S=0;
-    int D;
+    int D=0;
     if (B%A!=0){
         for (D=0;D<B%A;D++){
             E=E*10+(C[D]-'0');
@@ -207,4 +207,57 @@ int ejercicio17(int A){
         }
     }
     return suma;
+}
+
+//----------------------------------------------------------------------------------------
+
+void crear_2(char cadena[]){
+    int num, cont = 0,n=0;
+    char *c = cadena;
+    c[0] = '\0';
+
+    do{
+        //cout << "Hola\n";
+        n++;
+        srand(time(NULL)*n);
+        num = rand()%100;
+        if (num > 64 && num < 91){
+            //cout << num  << "\t" << cont << endl;
+            c[cont] = char(num);
+            cont ++;
+        }
+    }while(cont != 201);
+}
+
+void rep_2 (char cadena[]){
+    int cont,cant,pes = 0;
+    char *c = cadena;
+    char *x = new char[201];
+    bool ava = true;
+
+    int dev = 0;
+
+    for (int i = 0; i < 200; i++){
+        x[pes] = '\0';
+        for (cant = 0;x[cant]!='\0';cant++){
+            //cout << c[i] << "\t" << x[cant] << endl;
+            if (c[i] == x[cant])ava = false;
+        }
+        if (ava == true){
+            x[pes] = c[i];
+            //cout << x[pes];
+            cont = 0;
+            cant = 0;
+            do{
+                if (c[cont] == x[pes])cant++;
+                cont ++;
+            }while (cont != 200);
+            cout << x[pes] << ":  " << cant << endl << endl;
+            dev += cant;
+            pes++;
+        }
+        ava = true;
+    }
+    //for (int i=0;i<200;i++)cout << c[i];
+    //cout << endl << dev;
 }

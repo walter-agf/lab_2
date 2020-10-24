@@ -25,3 +25,9 @@ bool ejercicio13(int i, int j, int P[6][8]);
 void ejercicio15(int l_A[4], int l_B[4]);
 
 int ejercicio17(int A);
+
+//-------------------------------------------------------------------------
+
+void crear_2(char cadena[]);
+
+void rep_2 (char cadena[]);

@@ -2,6 +2,8 @@
 
 int main(){
 
+    // -------------------------------------------------------------------------------------------------
+
     long int ejer, A, B, D, E, i, j;
     char letra, salir;
     char C[50];
@@ -30,6 +32,10 @@ int main(){
                     {'-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-'},
                     {'-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-'}};
 
+    //---------------------------------------------------------------------------------------------------
+
+    //Hola
+
     while(true){
         cout << "\n\n\tIngrese el numero del problema: ";
         cin >> ejer;cout<<"\n\n\n";
@@ -46,21 +52,33 @@ int main(){
                 if(A < B) cout << "Faltante: " << A << endl;
             break;
         }
+        case 2:{
+            /*Elabore un programa que genre un arreglo de 200 letras mayúsculas aleatorias, imprima este arreglo
+            y luego imprima cuantas veces se repite cada letra en el arreglo*/
 
+            char *cadena  = new char [201];
+            crear_2(cadena);
 
-//            case 2:
-//                srand(time(NULL));
-//                for (B=0;B<=14;B++){
-//                    lista[B] = 65+rand()%(91-65);
-//                    A=lista[B];
-//                }
-//                cout << lista << endl;
-//            break;
+            for (i=0;i<=200;i++) cout << cadena[i];//<< "\t" << i << endl;
+            cout << "\n\n";
+            rep_2 (cadena);
+
+            break;
+        }
 
             case 3:{
                 cout << "Se ingresan dos cadenas y se comprueba si son iguales\n\nIngresar el tamano de las cadenas: ";
                 cin >> A;
                 ejercicio3(A);
+            break;
+        }
+
+        case 4:{
+            int n = 0;
+            for (int i=0; i < 100 ; i++){
+                n++;
+                cout << time(NULL)*n << endl;
+            }
             break;
         }
 
