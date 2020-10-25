@@ -321,3 +321,109 @@ void num_cad (char cad_8[],int num){
     for (int i = 0; i <= c_c ; i++) cout << caraceres[i];
     cout << "\n\n";
 }
+
+void rom_ara(char cad_10[], int num)
+{
+    char * cad = cad_10;
+    int val = 0;
+    for (int i=0; i<num;){
+        if(cad[i] == 'I' || cad[i] == 'i' ){
+            if (cad[i+1] == 'X' || cad[i+1] == 'x') {
+                val += 9;
+                i+= 2;
+            }
+            else if (cad[i+1] == 'V' || cad[i+1] == 'v') {
+                val += 4;
+                i+= 2;
+            }
+            else if (cad[i+1] == 'I' || cad[i+1] == 'i') {
+                if (cad[i+2] == 'I' || cad[i+2] == 'i') {
+                    val += 3;
+                    i+= 3;
+                }
+                else{
+                    val += 2;
+                    i += 2;
+                }
+            }
+            else {
+                val++;
+                i++;
+            }
+        }
+
+        else if (cad[i] == 'V' || cad[i] == 'v' ){
+            val += 5;
+            i ++;
+        }
+
+        else if (cad[i] == 'X' || cad[i] == 'x' ){
+            if (cad[i+1] == 'L' || cad[i+1] == 'l'){
+                val += 40;
+                i += 2;
+            }
+            else if (cad[i+1] == 'C' || cad[i+1] == 'c'){
+                val += 90;
+                i += 2;
+            }
+            else if (cad[i+1] == 'X' || cad[i+1] == 'x'){
+                if (cad[i+2] == 'X' || cad[i+2] == 'x'){
+                    val += 30;
+                    i += 3;
+                }
+                else{
+                    val += 20;
+                    i += 2;
+                }
+            }
+            else{
+                val += 10;
+                i ++;
+            }
+        }
+
+        else if (cad[i] == 'L' || cad[i] == 'l' ){
+            val += 50;
+            i ++;
+        }
+
+        else if (cad[i] == 'C' || cad[i] == 'c' ){
+            if (cad[i+1] == 'D' || cad[i+1] == 'd'){
+                val += 400;
+                i += 2;
+            }
+            else if (cad[i+1] == 'M' || cad[i+1] == 'm'){
+                val += 900;
+                i += 2;
+            }
+            else if (cad[i+1] == 'C' || cad[i+1] == 'c'){
+                if (cad[i+2] == 'C' || cad[i+2] == 'c'){
+                    val += 300;
+                    i += 3;
+                }
+                else{
+                    val += 200;
+                    i += 2;
+                }
+            }
+            else{
+                val += 100;
+                i ++;
+            }
+        }
+
+        else if (cad[i] == 'D' || cad[i] == 'd' ){
+            val += 500;
+            i ++;
+        }
+
+        else if (cad[i] == 'M' || cad[i] == 'm' ){
+            val += 1000;
+            i ++;
+        }
+
+        else cout << "\n\n Valor = " << cad[i] << "  INDETERMINADO en Romano\n\n";
+    }
+
+    cout << "\n\nEl numero en arabigo es = " << val << "\n\n";
+}

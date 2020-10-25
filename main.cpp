@@ -118,8 +118,8 @@ int main(){
             cout << "\n\nIngrese una cadena de caracteres y se separaram numeros de letras\n\n";
             cout << "Cuatos caracteres tiene la cadena ?\n\n --> ";cin >> num;
             char *cad_8 = new char [num];
-            cout << "\n\n\nIngrese la cadena = "; cin >> cad_8;
-            cout << "\n\nOriginal =  ";
+            cout << "\n\nIngrese la cadena = "; cin >> cad_8;
+            cout << "\n\n\n\nOriginal =  ";
             for (int i=0; i < num; i++) cout << cad_8[i];
             cout << "\n\n";
             num_cad (cad_8,num);
@@ -137,16 +137,15 @@ int main(){
         }
 
         case 10:{
-            /*Escriba un programa que reciba una cadena de caracteres y separe los números del resto de
-            caracteres, generando una cadena que no tiene números y otra con los numeros que habia en la
-            cadena original*/
-            cout << "\n\nIngrese una cadena de caracteres y se separaram numeros de letras\n\n";
-            cout << "Cuatos caracteres tiene la cadena ?\n\n --> ";cin >> num;
-            char *cad_8 = new char [num];
-            cout << "\n\n\nIngrese la cadena = "; cin >> cad_8;
-            num_cad (cad_8,num);
+            /*Escriba un programa que permita convertir un numero en el sistema ROMANO al sistema arábigo usado
+            actualmente*/
+            cout << "\n\nIngrese un numero en Sistema Romano y lo convierte a sistema arabigo\n\n";
+            cout << "Cuatos caracteres tiene el numero Romano ?\n\n --> ";cin >> num;
+            char *cad_10 = new char [num];
+            cout << "\n\n\nIngrese el numero = "; cin >> cad_10;
+            rom_ara (cad_10,num);
          break;
-     }
+        }
 
             case 11:{
             for(salir='s';salir!='n';){
@@ -169,6 +168,19 @@ int main(){
                 else if (salir!='n') cout << "Debe de poner s o n minusculas" << endl;
             }
             break;
+        }
+
+        case 12:{
+            /*Un cuadro mágico es una matriz, de numeros enteros sin repetir, en la que la suma de los numeros
+            en cada columna, cad fila, y cada diagonal prinsipal, tienen como resultado el mismo constante
+            escriba un progama que permita al usuario ingresar, una matriz cuadrada, imprima la matriz, y verifique si
+            la matriz es cuadrado mágico*/
+            cout << "\n\nIngrese un numero en Sistema Romano y lo convierte a sistema arabigo\n\n";
+            cout << "Cuatos caracteres tiene el numero Romano ?\n\n --> ";cin >> num;
+            char *cad_10 = new char [num];
+            cout << "\n\n\nIngrese el numero = "; cin >> cad_10;
+            rom_ara (cad_10,num);
+         break;
         }
 
             case 13:{

@@ -37,3 +37,5 @@ void cad_int (char cad_4[], int num);
 void min_may (char cad_6[], int num);
 
 void num_cad (char cad_8[],int num);
+
+void rom_ara (char cad_10[],int num);
