@@ -118,8 +118,8 @@ int main(){
             cout << "\n\nIngrese una cadena de caracteres y se separaram numeros de letras\n\n";
             cout << "Cuatos caracteres tiene la cadena ?\n\n --> ";cin >> num;
             char *cad_8 = new char [num];
-            cout << "\n\n\nIngrese la cadena = "; cin >> cad_8;
-            cout << "\n\nOriginal =  ";
+            cout << "\n\nIngrese la cadena = "; cin >> cad_8;
+            cout << "\n\n\n\nOriginal =  ";
             for (int i=0; i < num; i++) cout << cad_8[i];
             cout << "\n\n";
             num_cad (cad_8,num);

@@ -31,3 +31,9 @@ int ejercicio17(int A);
 void crear_2(char cadena[]);
 
 void rep_2 (char cadena[]);
+
+void cad_int (char cad_4[], int num);
+
+void min_may (char cad_6[], int num);
+
+void num_cad (char cad_8[],int num);

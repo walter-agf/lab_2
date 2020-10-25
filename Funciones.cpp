@@ -261,3 +261,63 @@ void rep_2 (char cadena[]){
     //for (int i=0;i<200;i++)cout << c[i];
     //cout << endl << dev;
 }
+
+void cad_int(char cad_4[], int num)
+{
+    char *cad = cad_4;
+    int valor = 0, uni = 0, cont = 0;
+    num --;
+    for (uni=1;num!=0;num--) uni *= 10;
+    //cout << "\n\n" << uni << "\n\n";
+    do{
+        valor += (int(cad[cont])-48) * uni;
+        uni /= 10;
+        cont ++;
+        //cout << valor << "\n";
+    }while(uni >= 1);
+
+    cout << "El numero ingresado en entero es =   " << valor << "\n\n";
+}
+
+void min_may(char cad_6[], int num)
+{
+    char *cad = cad_6;
+    int valor, cont = 0, i = num;
+
+    do{
+        if (int(cad[cont]) != 0){
+            valor = int(cad[cont]);
+            if (valor > 96 && valor < 123) {
+                valor -= 32;
+                cad[cont] = char(valor);
+            }
+        }
+        cont ++;
+        num --;
+
+    }while(num != 0);
+
+    cout << "\n\n";
+
+    for (;num<i;num++) cout << cad[num];
+}
+
+void num_cad (char cad_8[],int num){
+    char *cad = cad_8;
+    char *caraceres = new char [num];
+    int c_c = 0, valor;
+    cout << "\n\nNumero =  ";
+    for (int i=0 ; i<=num; i++){
+        valor = int(cad[i]);
+        if ( valor > 47 && valor < 58){
+            cout << cad[i];
+        }
+        else {
+            caraceres[c_c] = cad[i];
+            c_c++;
+        }
+    }
+    cout << "\n\nCaracteres =  ";
+    for (int i = 0; i <= c_c ; i++) cout << caraceres[i];
+    cout << "\n\n";
+}
