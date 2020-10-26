@@ -189,7 +189,10 @@ int main(){
             cout << "\t | D --> ";cin >> d;cout << "\t | E --> ";cin >> e;cout << "\t | F --> ";cin >> f;cout << "\n\n";
             cout << "\t | G --> ";cin >> g;cout << "\t | H --> ";cin >> h;cout << "\t | I --> ";cin >> i;cout << "\n\n";
 
-            char *cad_10 = new char [num];
+            int cad_12[3][3] = {{a,b,c},
+                                {d,e,f},
+                                {g,h,i}};
+            
             cout << "\n\n\nIngrese el numero = "; cin >> cad_10;
             rom_ara (cad_10,num);
          break;
